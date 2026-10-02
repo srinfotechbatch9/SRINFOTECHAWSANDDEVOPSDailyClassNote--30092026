@@ -202,13 +202,16 @@ Once genearted the keys (public/private) and copy public key to Github Account
 Go to -->Profile   ---->Settings  --->Click SSH and GPG keys
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/86dd201a-5866-4cf2-91d1-95bb6681c2ed" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2cc1ea91-b5d8-4db9-bebe-4502ee6abf9a" />
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d9e3ca96-1513-492e-af12-bdb06ae8ef8b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a6ee9d1e-c65a-48b4-a028-45c20c8a5bf3" />
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1a68eb80-56d1-4d98-a3dd-38a537294ea7" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d3e6638a-c879-454c-8c67-8b75a5833571" />
+
 
 
 Click SSH and GPG Keys
@@ -221,7 +224,8 @@ Click SSH and GPG Keys
 click New SSH Key
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/885c10d5-30d3-47ca-bb59-4bf9e435512a" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6ff4085d-aa17-4963-9368-ebc44d341d7b" />
+
 
 
 
@@ -233,7 +237,8 @@ Add new SSH Key and click Add SSH Key
 
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6793bee5-44b5-4696-b948-453378739537" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cc9cea87-ab12-45b1-a149-155490eede37" />
+
 
 Lab Practice::
 ==============
