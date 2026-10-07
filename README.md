@@ -429,3 +429,363 @@ To github.com:srinfotechbatch9/srinfotechdemo.git
 
 HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/srinfotechdemo (main)
 $
+
+
+06/10/2026::
+===========
+
+Fork in Github::
+====================
+
+In GitHub, forking is a way to create your own copy of someone else's repository. example please fork below project to your own github account
+
+https://github.com/srinfotechbatch9/java-hello-world-with-maven
+
+steps to fork the project::
+============================
+
+Go to Above Project URL
+
+https://github.com/srinfotechbatch9/java-hello-world-with-maven
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/45b0c823-863d-447b-943e-a32cbfc6cb65" />
+
+
+at top right we can found Fork option in github Account 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/406477ce-4851-462c-9187-30e50320c4f7" />
+
+
+Click on Fork and click create Fork 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f399adbd-d00c-4cd9-9dd3-9a0e16170aa5" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/59c07b24-f750-41ba-851c-4f2b6712ccaf" />
+
+
+Successfully Fork done from someone else's repository 
+
+once above steps done ,please clone the Project and Modified files and push to github repository
+
+
+Git Commands::
+================
+
+1. git clone <repository url>
+
+>git clone 
+
+>cd <repository name>
+
+>git status
+
+>git add --all
+
+after added the files we need to verify the status of the files
+
+>git status
+
+>git commit -m "message"
+
+>git push    ---> push the changes from local machine to remote
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+>ssh-keygen -t ed25519 -C "srinfotechbatch8@gmail.com"
+
+
+Lab Practice::
+=================
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest
+$ git clone git@github.com:srinfotechbatch9/java-hello-world-with-maven.git
+Cloning into 'SRINFOTECHBatch9'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest
+$ cd SRINFOTECHBatch9
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git push
+Everything up-to-date
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git push
+Everything up-to-date
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git push origin main
+Everything up-to-date
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git pull
+Already up to date.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git push
+Everything up-to-date
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Batch8.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Batch8.md
+        modified:   README.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git commit -m "updated readme file & added new batch8 files"
+[main 046ee6c] updated readme file & added new batch8 files
+ 2 files changed, 12 insertions(+), 14 deletions(-)
+ create mode 100644 Batch8.md
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:srinfotechbatch8/SRINFOTECHBatch8.git
+   c266d74..046ee6c  main -> main
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/SRINFOTECHBatch8 (main)
+$
+
+
+Git Restore::
+===============
+git restore is a Git command used to undo changes in files by restoring them from a previous state.
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git add Jenkinsfile
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Jenkinsfile
+
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git restore --staged Jenkinsfile
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git status
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Jenkinsfile
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f6b89a50-fb86-4905-b97a-145a7f851f0a" />
+
+
+git revert::
+==============
+
+
+git revert is used to undo a commit by creating a new commit that reverses the changes from an earlier commit.
+
+Syntax::
+=========
+
+>git revert <commitID>
+
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git revert 8f5fbf9741741740672e874cb78c31b7539205d7
+
+[master 86e7cfa] Revert "added one stage in jenkisnfile"
+ 1 file changed, 5 deletions(-)
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-3GU6R56 UCRT64 ~/Documents/srinfotech batch9/java-hello-world-with-maven (master)
+
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch9/java-hello-world-with-maven.git
+   8f5fbf9..86e7cfa  master -> master
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8a326b10-8f6d-4d2a-8819-0533851734f6" />
+
+
+Github Branching Model::
+-------------------------------
+
+A GitHub branching model is a structured way of organizing branches in a Git repository to manage development workflows effectively. It helps teams work collaboratively, isolate features, manage releases, and deploy code more efficiently.
+
+<img width="1815" height="711" alt="image" src="https://github.com/user-attachments/assets/34ce00f8-1928-47b1-ae39-1f88fbcd8637" />
+
+
+A GitHub branching strategy is crucial for maintaining an organized workflow in version control. There are different strategies depending on the size of the project, the number of team members, and the desired workflow. Here are some common branching strategies used in GitHub:
+
+main or master branch:: This is default branch and whenever we created the empty Repository by defauly main or master branche is created automatically.
+main or master branch always stable and live code 
+
+feature branch:: It could be a new feature, an improvement of existing features, bug fixes, or any other changes. A feature branch is a type of branch in Git typically used to develop new features for the software.feature branch will created from main or master OR feature branch created from latest release branch always based on the release cycle
+
+formate:: feature/YYYY.MM.DD
+ feature/2026.10.06
+
+release branch:: Based on the release we have created release branch accourdingly and starts the next release cycle.
+always release branch created from master only and master have stable and live code and post release we shold merged code changes to master branch only
+
+release/2026.10.06
+
+
+
+
+Create New Branch::
+=================
+
+Click Branches
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a795a257-a126-449e-9dba-22729bec940d" />
+
+Find New Branch at Right side and click
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2b5fbd36-953e-45e0-baef-450c680b7e5f" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/17de84ed-cc93-4b01-8f32-5a1ff0ddf3ee" />
+
+New feature Branch Formate----> feature/YYYY.MM.DD
+
+feature/2026.10.06
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/60902962-ec6c-4c9f-90eb-04c9835a64d0" />
+
+click create New Branch 
+
+Branch Created Successfully
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b6821e5f-3b54-406d-a4ae-7f2fd885974f" />
+
+
+
+Branches:
+==============
+
+
+main (or master): Always production-ready.
+
+feature/*: Used for new features.
+
+release/*: Prepares for a new production release.
+
+main or master branch:: 
+=====================
+
+This is default branch and whenever we created the empty Repository by defauly main or master branche is created automatically. main or master branch always stable and live code
+
+feature branch:: 
+===============
+
+It could be a new feature, an improvement of existing features, bug fixes, or any other changes. A feature branch is a type of branch in Git typically used to develop new features for the software.feature branch will created from main or master OR feature branch created from latest release branch always based on the release cycle
+
+formate:: 
+=============
+
+feature/YYYY.MM.DD feature/2026.10.06
+
+release branch:: 
+====================
+
+Based on the release we have created release branch accourdingly and starts the next release cycle. always release branch created from master only and master have stable and live code and post release we shold merged code changes to master branch only
+
+release/2026.10.06
