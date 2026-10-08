@@ -789,3 +789,116 @@ release branch::
 Based on the release we have created release branch accourdingly and starts the next release cycle. always release branch created from master only and master have stable and live code and post release we shold merged code changes to master branch only
 
 release/2026.10.06
+
+
+07/10/2026::
+===============
+
+Raise PR (Pull Request) :: 
+=================================
+
+Merge the code from one branch to another branch that is called pull request
+
+
+<img width="1817" height="718" alt="image" src="https://github.com/user-attachments/assets/fe2d1b6b-1d3b-433d-ac04-2e3f272d180b" />
+
+
+below are the steps to raise PR::
+
+Go to -->Pull requests and click
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/baf5a7d7-f69d-44e8-87ad-ae67d082353f" />
+
+
+Click New Pull Request::
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/68456b4f-bd40-41b6-a238-25439f97dff4" />
+
+
+please select base & compare branches so here base branch is release/2025.08.10 and compare branch is feature/2025.08.05
+
+i'm going to merge code changes from feature branch to release branch 
+
+
+click create pull request
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6b7a39c0-7a34-45c9-812b-ca518d1a441a" />
+
+
+![image](https://github.com/user-attachments/assets/08a98671-c810-46fc-9024-17bae7538a61)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e36c29e8-3c38-4579-8073-58ac6304e6fd" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dc582d4a-e173-4648-a76c-3aebd7869b5b" />
+
+
+click merge request
+
+![image](https://github.com/user-attachments/assets/44a4b84e-1aef-4b19-a93e-64e48b362b29)
+
+ Open
+srinfotechbatch3 wants to merge 1 commit into main from feature/2025.08.05
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5a70ee7d-fc8e-45aa-bb28-6a445a223cf0" />
+
+
+confirm merge
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b6e9ab2f-30cc-4fe2-9754-03f6f6262786" />
+
+
+Lab Practice::
+================
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest
+$ git clone git@github.com:srinfotechbatch8/java-hello-world-with-maven.git
+Cloning into 'java-hello-world-with-maven'...
+remote: Enumerating objects: 85, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 85 (delta 0), reused 2 (delta 0), pack-reused 83 (from 1)
+Receiving objects: 100% (85/85), 15.60 KiB | 99.00 KiB/s, done.
+Resolving deltas: 100% (29/29), done.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest
+$ cd java-hello-world-with-maven/
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (master)
+$ git checkout feature/2026.06.12
+branch 'feature/2026.06.12' set up to track 'origin/feature/2026.06.12'.
+Switched to a new branch 'feature/2026.06.12'
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (feature/2026.06.12)
+$ git status
+On branch feature/2026.06.12
+Your branch is up to date with 'origin/feature/2026.06.12'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/main/java/hello/HelloWorld.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (feature/2026.06.12)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (feature/2026.06.12)
+$ git commit -m "added new user class for to implement the user help"
+[feature/2026.06.12 dedb6ff] added new user class for to implement the user help
+ 1 file changed, 12 insertions(+)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (feature/2026.06.12)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 577 bytes | 288.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch8/java-hello-world-with-maven.git
+   f33db13..dedb6ff  feature/2026.06.12 -> feature/2026.06.12
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (feature/2026.06.12)
+$
