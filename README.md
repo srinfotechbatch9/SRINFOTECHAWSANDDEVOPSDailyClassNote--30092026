@@ -1340,13 +1340,17 @@ It will navigate to System properties
 
 
 Click Environment Variables
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/52eef6c1-4f90-4af6-9f34-bf5616f85770" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3208815e-ffd9-4968-88ae-bbbfde082c6e" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d75f87a7-72c1-4b21-aac3-a87cf07742b0" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/440cffe4-ea29-40cb-9178-ab04ce56a008" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/603f986f-1569-400e-b3cb-c28d0dcb1598" />
 
 User variables::
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49bef1e3-b9af-4a6a-a5ff-e126ee21fb48" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5439b27f-3008-467c-8cdc-b0cb73f0a06b" />
+
 
 Click New
 
@@ -1354,40 +1358,48 @@ Variable Name:: JAVA_HOME
 
 Variable Value:: C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d56468bb-3894-466a-9c91-7fa11d4bc641" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d6066a76-5266-4e32-ae1c-71e566df3979" />
+
 
 Click OK
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eb6ab743-d034-4a57-bc7f-e55885110007" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e50eedd6-ca2c-4bb9-899b-2e167d823986" />
+
 
 System variable::
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8f2fce13-14ef-460e-9288-196f0fd109b6" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/46856236-0ebe-426a-8eae-e13b8154a732" />
+
 
 Edit Path
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ec43379-3bd7-4065-b9fc-327eb9c84f24" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4bed73b7-95d3-4161-a5e5-30d097afe30c" />
+
 
 Click New and give Java Installed path till \bin
 
 C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12\bin
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/236b86ef-c042-4b4f-9b77-25af4d6ec615" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/483760ac-1f96-4c97-9e8f-fc3411f4797b" />
+
 Click OK
 
 You Can verify Java is Installed Or Not
 
 Go to command Prompt
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4b6861cd-17f3-43bb-8029-1949da8581dd" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4c2c9a7a-0f5e-4347-9c59-18f687a27c62" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93b34148-ed2b-4179-aaea-f9d66447401f" />
 
-java --version
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b8cd36b-af28-4d86-992e-625c3091edf7" />
+
+
+>java --version
 
 C:\Users\HP>java --version java 17.0.12 2024-07-16 LTS Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286) Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dfbc4f6d-cb42-4eda-bee7-7ae2b8876e1d" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06d100a5-57f4-4ef7-843a-b28fe304506f" />
+
 
 
 Above Screeenshot JDK17 setup is done
@@ -1401,27 +1413,33 @@ click below Jenkins version
 
 Download Jenkins 2.515 for:
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04dd1910-6f40-48c0-b178-dab09e40a14e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22e6fa62-3e54-4161-b488-826c7e5f8183" />
+
 
 Jenkins.war file is downloaded
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/639bc8f3-4cb2-4b2d-bc99-2c2cd67e8741" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7418206b-bda5-45cf-afe6-b23a70ad89c1" />
+
 
 First download the jenkins.war file and right click -->open gitbash here
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/23c8f7a2-c162-4209-9444-ba317bf0e04c" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06d6d10e-eec9-4509-8223-d66437e7638b" />
+
 
 run the command
 
 >java -jar jenkins.war --httpPort=9090
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76e08ab9-e324-4b27-82ec-a4fe9b3fa335" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da2d7c1b-17ba-4456-9f03-3320b30d6266" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b67b73e2-7aa8-4ed7-b848-67de7b9b467b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/890f49a7-49c3-44af-814f-72cc24430c55" />
+
 
 we can see Jenkins is fully up and running
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/44fca976-9964-4997-ba56-98e91f1f3a56" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6324cbb2-377b-4e0c-905b-e25e1332d7b0" />
+
 
 
 >http://localhost:9090/
