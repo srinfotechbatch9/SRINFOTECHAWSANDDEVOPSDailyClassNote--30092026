@@ -1323,9 +1323,9 @@ Roles And Responsibilities::
 4) Devops engineer responsibility start from git and end with production
 
 
- Download JDK 17 ::
+ Download JDK 21 ::
 
-https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html
 
 Windows x64 Installer 153.92 MB
 
