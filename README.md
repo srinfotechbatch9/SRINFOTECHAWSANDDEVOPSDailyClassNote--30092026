@@ -1424,3 +1424,6 @@ we can see Jenkins is fully up and running
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/44fca976-9964-4997-ba56-98e91f1f3a56" />
 
 
+>http://localhost:9090/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/58fa1a1e-22c3-4c26-8998-6ea0d7f55cd7" />
