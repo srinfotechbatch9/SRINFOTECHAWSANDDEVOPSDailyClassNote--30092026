@@ -1347,7 +1347,6 @@ User variables::
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49bef1e3-b9af-4a6a-a5ff-e126ee21fb48" />
 
-
 Click New
 
 Variable Name:: JAVA_HOME
