@@ -1336,7 +1336,8 @@ Go to Search box & type Edit the system environemnt variables and click
 
 It will navigate to System properties
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/24287946-a9ad-4cca-89eb-2af8e29ca2c1" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6ffd42ab-9bcc-47a1-a7d7-0fc46e0a7414" />
+
 
 Click Environment Variables
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/52eef6c1-4f90-4af6-9f34-bf5616f85770" />
