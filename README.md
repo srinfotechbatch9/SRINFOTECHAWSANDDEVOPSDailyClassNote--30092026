@@ -1457,7 +1457,8 @@ Maven is a powerful build automation tool used primarily for Java projects. Deve
 
 it helps developers manage a project's build, dependencies, documentation, and more—all using a single configuration file called pom.xml
 
-<img width="1730" height="659" alt="image" src="https://github.com/user-attachments/assets/327d003d-b193-4f8a-b7ee-fcae4c88d978" />
+<img width="1431" height="674" alt="image" src="https://github.com/user-attachments/assets/4869cd35-7859-4a3a-b1d7-9b63143ef502" />
+
 
 Common Maven Commands OR Maven Goals::
 ========================================
@@ -1484,32 +1485,39 @@ Please download below zip file
 Binary zip archive apache-maven-3.9.10-bin.zip
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/23a4ca2a-9302-4740-ba1b-875d3c6cc04f" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d7d67d83-1de1-4fe4-bb72-de0ecad30f36" />
+
 
 Downloaded Zip file
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac207ff6-2007-41a1-b3ac-63e063e96355" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/84218cad-95c1-4ec8-b9d9-96ceaa06f8dd" />
+
 
 Please extract the file
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0431868-ae61-4ddd-b617-f988b6f039e0" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c495a902-5ff6-44c8-b830-61552097c135" />
+
 
 
 Go to Search box & type Edit the system environemnt variables and click
 
 It will navigate to System properties
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a054002b-19f6-4fc6-99bf-5d81fba7bc4f" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1414ae54-2006-4c9c-8b09-ba080a2722e6" />
+
 
 Click Environment Variables
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2c377ef4-7bc8-4990-ba99-fe2ba925cf29" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f00106c2-d499-448f-8baf-1cb73168975b" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d00041b-3f24-4553-ad09-eaf9b52ae6f7" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bf5403e5-93b4-4de5-811d-1efb547845b2" />
+
 
 User variables::
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6277a47d-efa2-40ee-b205-f7017f0b0b38" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4c0578e8-248d-4303-a438-e08078916b6c" />
+
 
 Click New
 
@@ -1517,15 +1525,18 @@ Variable Name:: MAVEN_HOME
 
 Variable Value:: C:\Users\HP\Downloads\apache-maven-3.9.10
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/09c5b7cf-1adb-4d20-8131-cc613544c5f5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d781912a-fccf-45b7-89e9-9739e70b0970" />
+
 
 Click OK
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c81ab2e-6396-4be2-a7d5-1607bb3e47ea" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6d078d78-ed2c-474d-9352-e51f71ddff81" />
+
 
 System variable::
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08a47638-0186-4b5a-be40-861703c8ac5e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c494c2df-d1a9-4420-8680-4a975b8a5eb4" />
+
 
 Edit Path
 
@@ -1533,17 +1544,20 @@ Click New and give maven Installed path till \bin
 
 C:\Users\HP\Downloads\apache-maven-3.9.10\bin
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9279750f-41ac-435e-ad28-9bdc6cde37cf" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/45ce1ac9-75cb-4e3d-8acd-104c3e69ec47" />
+
 
 Click OK
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/018f0238-2635-4cb5-a9b2-04c70cd6516c" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ec24e075-7c45-45af-875c-29d566e89a96" />
+
 
 You Can verify maven is Installed Or Not
 
 Go to command Prompt
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c4589143-6477-4bb2-bab6-0ef0c38b9cbc" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/62a819f4-30c8-4ffa-89be-774a807f442f" />
+
 
 >mvn -v
 
@@ -1558,13 +1572,14 @@ Create sample Freestyle project::
 
 Click New Item
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4727bab2-ee3c-4e54-a50f-9a6b20480e8f" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8b02688-e28a-4a53-821e-91cfb1917225" />
+
 
 
 Configuration stages::
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/de06ce6d-8681-45fa-abe9-c3e4204ab3a9" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3466259e-023b-4143-82c5-6f1c1bed8b93" />
 
 
 1.General
@@ -1584,7 +1599,8 @@ General Section provide the Project/job description
 At SCM stage level select the Git and provide the github details
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/acc049e7-d790-44c8-90c5-fc4bda08de3e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9c9c775e-cb11-4a00-9d29-7fe75369b32a" />
+
 
 https://github.com/jabedhasan21/java-hello-world-with-maven.git
 
@@ -1593,12 +1609,14 @@ Below url is java hello world maven Project and everyone Should please Fork to y
 
 Branch Specifier
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22f05e82-f8ad-445b-aeaa-26274f1df81f" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7df6ecb-3ebc-4df4-809f-e4cabbedc4ea" />
+
 
 
 Build steps::select the Invoke top-level Maven targets Goals section
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/052bd1bf-a581-4cbe-927b-50896a05aa59" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/edf9b9bd-8240-4c39-b144-87d6c7fff176" />
+
 
 
 mvn clean install
