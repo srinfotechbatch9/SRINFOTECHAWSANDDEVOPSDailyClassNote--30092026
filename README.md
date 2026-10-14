@@ -1445,3 +1445,186 @@ we can see Jenkins is fully up and running
 >http://localhost:9090/
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/58fa1a1e-22c3-4c26-8998-6ea0d7f55cd7" />
+
+
+13/10/2026::
+============
+
+Maven::
+========
+
+Maven is a powerful build automation tool used primarily for Java projects. Developed by the Apache.
+
+it helps developers manage a project's build, dependencies, documentation, and more—all using a single configuration file called pom.xml
+
+<img width="1730" height="659" alt="image" src="https://github.com/user-attachments/assets/327d003d-b193-4f8a-b7ee-fcae4c88d978" />
+
+Common Maven Commands OR Maven Goals::
+========================================
+
+mvn clean ------------> Deletes target/ directory (clean build).
+
+mvn compile -----------> Compiles the source code.
+
+mvn test ------------> Runs tests.
+
+mvn package ------------> Creates a JAR/WAR.
+
+mvn install ------------> Installs package into your local repository.
+
+mvn deploy -------------> Deploys package to a remote repository.
+
+
+Maven Download link
+
+https://maven.apache.org/download.cgi
+
+Please download below zip file
+
+Binary zip archive apache-maven-3.9.10-bin.zip
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/23a4ca2a-9302-4740-ba1b-875d3c6cc04f" />
+
+Downloaded Zip file
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac207ff6-2007-41a1-b3ac-63e063e96355" />
+
+Please extract the file
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0431868-ae61-4ddd-b617-f988b6f039e0" />
+
+
+Go to Search box & type Edit the system environemnt variables and click
+
+It will navigate to System properties
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a054002b-19f6-4fc6-99bf-5d81fba7bc4f" />
+
+Click Environment Variables
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2c377ef4-7bc8-4990-ba99-fe2ba925cf29" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d00041b-3f24-4553-ad09-eaf9b52ae6f7" />
+
+User variables::
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6277a47d-efa2-40ee-b205-f7017f0b0b38" />
+
+Click New
+
+Variable Name:: MAVEN_HOME
+
+Variable Value:: C:\Users\HP\Downloads\apache-maven-3.9.10
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/09c5b7cf-1adb-4d20-8131-cc613544c5f5" />
+
+Click OK
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c81ab2e-6396-4be2-a7d5-1607bb3e47ea" />
+
+System variable::
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08a47638-0186-4b5a-be40-861703c8ac5e" />
+
+Edit Path
+
+Click New and give maven Installed path till \bin
+
+C:\Users\HP\Downloads\apache-maven-3.9.10\bin
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9279750f-41ac-435e-ad28-9bdc6cde37cf" />
+
+Click OK
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/018f0238-2635-4cb5-a9b2-04c70cd6516c" />
+
+You Can verify maven is Installed Or Not
+
+Go to command Prompt
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c4589143-6477-4bb2-bab6-0ef0c38b9cbc" />
+
+>mvn -v
+
+
+C:\Users\HP>mvn -v
+
+Apache Maven 3.9.10 (5f519b97e944483d878815739f519b2eade0a91d) Maven home: C:\Users\HP\Downloads\apache-maven-3.9.10 Java version: 17.0.12, vendor: Oracle Corporation, runtime: C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12 Default locale: en_IN, platform encoding: Cp1252 OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+
+Create sample Freestyle project::
+===================================
+
+Click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4727bab2-ee3c-4e54-a50f-9a6b20480e8f" />
+
+
+Configuration stages::
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/de06ce6d-8681-45fa-abe9-c3e4204ab3a9" />
+
+
+1.General
+
+2.Source code management (SCM)
+
+3.Triggres
+
+4.Environment
+
+5.Build Steps
+
+6.Post Build Actions
+
+General Section provide the Project/job description
+
+At SCM stage level select the Git and provide the github details
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/acc049e7-d790-44c8-90c5-fc4bda08de3e" />
+
+https://github.com/jabedhasan21/java-hello-world-with-maven.git
+
+Below url is java hello world maven Project and everyone Should please Fork to your github account
+
+
+Branch Specifier
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22f05e82-f8ad-445b-aeaa-26274f1df81f" />
+
+
+Build steps::select the Invoke top-level Maven targets Goals section
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/052bd1bf-a581-4cbe-927b-50896a05aa59" />
+
+
+mvn clean install
+
+Maven goals::
+
+mvn test
+
+mvn install
+
+mvn clean install
+
+mvn clean
+
+mvn package
+
+Job will be created
+
+Click Build Now
+
+Buils is Inprogress
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e33e192-ee14-4ec2-8196-75830efe417c" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/89ef2cdd-b6d9-4713-83a3-6fa280885c92" />
+
+
