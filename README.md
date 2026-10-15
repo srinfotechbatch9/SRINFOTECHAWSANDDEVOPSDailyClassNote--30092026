@@ -1647,3 +1647,144 @@ Buils is Inprogress
 
 
 
+14/10/2026
+============
+
+<img width="1584" height="561" alt="image" src="https://github.com/user-attachments/assets/2ea3fca9-3599-4bec-b9d5-5e44e416c62e" />
+
+Create sample Freestyle project::(onlinebookstore & spring-petclininc)::
+========================================================================
+
+below are 2 projects & please fork into your github account
+
+https://github.com/srinfotechbatch9/spring-petclinic
+
+https://github.com/srinfotechbatch9/onlinebookstore
+
+Click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bc4ab3cc-affd-4a7c-a89f-79ede67748d3" />
+
+Configuration stages::
+
+1.General
+
+2.Source code management (SCM)
+
+3.Triggres
+
+4.Environment
+
+5.Build Steps
+
+6.Post Build Actions
+
+General Section provide the Project/job description
+
+At SCM stage level select the Git and provide the github details
+
+Below url are onlinebookstore/spring-petclinic Projects and everyone Should please Fork to your github account
+
+https://github.com/srinfotechbatch9/spring-petclinic
+
+https://github.com/srinfotechbatch9/onlinebookstore
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8ecdc41c-48f5-4c8d-beff-fb32892ac7d2" />
+
+Branches to build
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/885d17b2-7c55-443b-a234-68360562fc49" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac46d217-580a-4bb4-9da1-0b16583ceabb" />
+
+Build steps::select the Invoke top-level Maven targets Goals section
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5fccc00a-a1ff-4ba9-98bc-5ea92459a20a" />
+
+mvn clean install
+
+Maven goals::
+
+mvn test
+
+mvn install
+
+mvn clean install
+
+mvn clean
+
+mvn package
+
+click Save
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f8767d66-4ebc-4df5-bf95-b3875add32ab" />
+
+Job will be created
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ddef77f4-ac58-4ce9-8be8-09798fa8dafd" />
+
+Click Build Now
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/74f74d4f-0fcb-402b-a5f9-9d8d01db2f01" />
+
+Buils is Inprogress
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/95134b82-20fb-4fff-9205-877be0200d1a" />
+
+Build Success
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/20e6b399-28ab-4e12-915b-d06319f548cf" />
+
+please follow the Same process steps for spring-petclinic project as well
+
+
+Poll SCM :: 
+=============
+
+Jenkins server ask git if there is any changes in git server or not, if changes there Jenkins server build/package the changes , every change build happened like 5 mints ,means every 5 minutes verify the Jenkins server to git if there is any changes
+
+<img width="1799" height="584" alt="image" src="https://github.com/user-attachments/assets/c3e9a129-d6bd-415d-b32f-214c6604dec1" />
+
+POLL SCM ----* * * * * --every minute when every commit
+
+Chrone JObs Formate LInk::
+
+https://crontab.guru/examples.html
+
+Create one sample POLL SCM jenkins job::
+
+Go to jenkins Dashboard
+
+click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3bc3ff50-0d90-47c4-8915-6f4025d98fe9" />
+
+Description
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ee03f641-7330-4263-a259-8eb83b2d9edc" />
+
+Provide the Git URL
+
+Onlinebookstore Project:: https://github.com/srinfotechbatch9/onlinebookstore.git
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6119b0b9-c5d9-4570-910b-312b2dbe4d0f" />
+
+Branch buiild
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4b008080-d780-4416-91c9-c20151760e2a" />
+
+POLL SCM:: * * * * *
+
+every minute build was trigger when new commits happend in github repository
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5645eba3-6c3c-4116-b766-7b40a5b36b7e" />
+
+Build Steps::
+
+Select Invoke top-level Maven targets
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e751efca-8914-49b3-871b-123de05b275f" />
+
+Once New Commits Happend in Github , Automatically Build is triggered in The Jenkins Server this Called CI (Continuous Integration)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/92a62fac-79fc-49d8-bb07-f65d7e6cee84" />
