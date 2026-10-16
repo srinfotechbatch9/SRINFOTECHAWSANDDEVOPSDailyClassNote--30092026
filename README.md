@@ -1788,3 +1788,69 @@ Select Invoke top-level Maven targets
 Once New Commits Happend in Github , Automatically Build is triggered in The Jenkins Server this Called CI (Continuous Integration)
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/92a62fac-79fc-49d8-bb07-f65d7e6cee84" />
+
+
+15/10/2026
+============
+
+Check Your Workspace::
+once build success we can bale to see the /target folder under the Workspace
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd2d7853-666a-4e35-abac-83b6e7d2a99b" />
+
+1.To check a job's workspace:
+
+2.Navigate to the job in the Jenkins UI.
+
+3.Click on "Workspace" in the left sidebar.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/41241bf9-9bcd-4047-865a-afe6f0648480" />
+
+Under Target Folder we can able to see the all .ear/war/jar/zip Artifacts Formates
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e1a523a6-8a92-47f8-93f6-b3ccc3454c2b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e1e404f7-0fac-43b5-b7e2-d54b80e6b0a9" />
+
+PLease try to execute the Project with below Maven Goals and see the difference
+
+Common Maven Commands OR Maven Goals::
+
+https://github.com/srinfotechbatch8/spring-petclinic.git
+
+https://github.com/srinfotechbatch8/onlinebookstore.git
+
+mvn clean ------------> Deletes target/ directory (clean build).
+
+mvn compile -----------> Compiles the source code.
+
+mvn test ------------> Runs tests.
+
+mvn package ------------> Creates a JAR/WAR.
+
+mvn install ------------> Installs package into your local repository.
+
+mvn deploy -------------> Deploys package to a remote repository.
+
+Execute the Jobs in Parallel::
+
+1.By Default execute the Jenkins build jobs are sequence way,one by one
+
+2.Don’t do 2 projects build parallel this is real time scenario but we can do parallel builds as well one job
+
+Jenkins build parallel setup
+
+Go job ---> configure ----> Generall ---> Execute concurrent builds if necessary
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/128820b2-34f5-4e94-8c08-43f48f62404f" />
+
+Executors::
+
+Go to Manage Jenkins ----> Node ---->Build-In-Node---->Configure # of executors
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69fd7a6c-ee0b-40a4-b7e2-cfffbf4595e4" />
+
+Here 10 builds execute parallel ,I kept executor is 10 this is same machine
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9a73f11a-4b61-4bcf-9585-b702cefd5b5a" />
+
