@@ -1816,9 +1816,9 @@ PLease try to execute the Project with below Maven Goals and see the difference
 
 Common Maven Commands OR Maven Goals::
 
-https://github.com/srinfotechbatch8/spring-petclinic.git
+https://github.com/srinfotechbatch9/spring-petclinic.git
 
-https://github.com/srinfotechbatch8/onlinebookstore.git
+https://github.com/srinfotechbatch9/onlinebookstore.git
 
 mvn clean ------------> Deletes target/ directory (clean build).
 
