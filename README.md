@@ -1854,3 +1854,119 @@ Here 10 builds execute parallel ,I kept executor is 10 this is same machine
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9a73f11a-4b61-4bcf-9585-b702cefd5b5a" />
 
+
+26/10/2026
+============
+
+Published Artifacts & Test Results::
+=====================================
+
+Artifacts are files generated during the build process
+
+JAR files
+WAR files
+ZIP packages
+JAR
+Test reports
+
+<img width="1373" height="680" alt="image" src="https://github.com/user-attachments/assets/7e6b18ef-ff9c-461c-878b-8152411ada80" />
+
+Post build Action i want to published artifacts & test results
+
+I'm going to created one free style job and configured Post-build Actions
+
+In post build Action select the option Archive the artifacts
+
+target/.war OR target/.jar OR target/.zip OR target/.ear
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b031ced2-87f8-4b36-871b-256ba6a9ba4a" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2d33a570-38a6-45b7-a6b4-ec03d69556b3" />
+
+In post build Action select the option Publish JUnit test result report for to published the test results
+
+target/surefire-reports/*.xml
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/44ff5c1f-694d-4532-98e7-891949de4e3c" />
+
+I want to show test results ::
+ls target
+
+Post build action stage
+
+Select archive the artifact --target/*.jar
+
+Junit test results:: --target/surefire-reports/*.xml
+
+See test results & antifactory ::
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f6875bb-b782-4b59-b009-c625a721de13" />
+
+3.For every company will do sequence build on one project this is recommended approach
+
+General ---just descriptin
+
+SCM
+
+where is your project--github, bitbucket
+
+Triggere
+
+whenever code changes i want build the project given time
+
+Environmant
+
+--all about workspaces folders
+
+Build Steps
+
+dev team will tell which tool we are using in current project
+
+Post Build
+
+devops engineer is aim is given continue feedback to dev team via email notification
+
+
+
+Build Periodically:::
+====================
+H/15 * * * * ----this build happened every 5 minutes without commits ,if changes are commit or not but every 5 mints build happened in Jenkins
+
+
+<img width="1198" height="594" alt="image" src="https://github.com/user-attachments/assets/0e2cc912-93e3-47be-b9ce-e226e7664d4c" />
+
+
+Please create a New Jenkins jobs both POLL SCM & Build Periodically
+
+https://github.com/srinfotechbatch9/spring-petclinic.git
+
+https://github.com/srinfotechbatch9/onlinebookstore.git
+
+Create Sample Build peridiocally jenkins job::
+=================================================
+
+Description
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba74e8f6-3379-4f16-9398-771b64cd38f1" />
+
+Git url::
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7cc0a7d3-6f2c-4d01-a02e-cc83be7dbf5a" />
+
+Build the branch
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4be7133c-705b-4248-923f-a3793f6b933e" />
+
+every 1 minute build will trigger
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f1d0b635-9645-4de4-b29a-f48cb372f848" />
+
+every 5 mints build will trigger
+
+Build Periodically::: H/15 * * * * ----this build happened every 5 minutes without commits ,if changes are commit or not but every 5 mints build happened in Jenkins
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/833dc674-47f1-43be-bad2-9403d8ccf2b1" />
+
+click save
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47699838-6ce0-49f9-a0bb-337c7daa0091" />
