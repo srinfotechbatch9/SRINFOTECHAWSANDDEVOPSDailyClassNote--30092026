@@ -1975,6 +1975,76 @@ click save
 27/10/2026
 ============
 
+Parameterized Jenkins Jobs ::
+=========================================
+
+Run the same job with different inputs without modifying the configuration manually
+
+Go To New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/64143125-ad0c-41a7-8641-8ca7f2a314cd" />
+
+Enter Job Name, Free style project and click ok
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54bce536-16f3-4265-80b7-4a4e32858bf7" />
+
+Enter the description
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dd671b3d-274c-4749-8bdc-5c92f066ac34" />
+
+Select the option This project is parameterised
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/37d17220-04da-481f-a264-b5c559b93056" />
+
+Click Add Parameter
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4fe815aa-8857-4027-b704-282f9437a54b" />
+
+Select optiions String parameter or choise parameter or boolean parameter you can select the ny options based on your requirement
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c7b03ea4-bf61-4e8f-8461-a0fb7f8357d0" />
+
+select string parameter
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/39eac3ed-0f0e-4b84-bd9a-a8e9c799952b" />
+
+Select Choise Parameter
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f057df87-2546-49d3-b239-21dda3e7cd69" />
+
+choise parameter
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f32e9c6b-17c4-44c7-b055-cb0febc83dcb" />
+
+Click Save
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/353dd726-57cc-458e-9f0f-9df39765c06d" />
+
+You Can observed this project is parameterized
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9145c7f9-0bd8-4587-a146-7f369a4a1c77" />
+
+Click Build with parameter
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/91f9ee96-0460-47ea-9428-9898c16dbf95" />
+
+
+select deployment environment
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/256dd180-dcd9-4d72-85ab-3ed2827fca9f" />
+
+select which versioj you want to deployment like tis you can configured real time parameterized project in jenkins
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1a989fb8-be41-4e08-b6ce-ca6a33dd7597" />
+
+Click Build
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c8c2f15c-a37d-466b-9af2-8ae2385f8f95" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/684b46eb-abdb-4c3c-8c89-925af6fdec65" />
+
+
+
 Email Notifications::
 =========================
 
@@ -2047,4 +2117,46 @@ SMTP Port:: 465
 
 Credentials:: Username:: Your Email Password::Zvqxxvplduhrlffv
 
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/aa9c6be1-a79b-4cda-9ebe-b8090cd1ffe5" />
 
+Select Use SSL
+
+Default content type HTML
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/8edaad9d-e969-4acd-bf58-237e1cf3f8d8" />
+
+Default Triggers
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6f06aa06-3b33-427f-94f9-20655a11e021" />
+
+E-mail Notification
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b317b8af-3517-484c-ab44-16f56ab0b272" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/301cbe8d-041f-433c-9a42-ed8b8c203c64" />
+
+Use SMTP Authentication? –should selected
+
+Use SSL select
+
+Port 465
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/647d1bc1-0ea1-440b-af53-7e7b3277550c" />
+
+Test configuration by sending test e-mail
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/60cc39ea-a7ee-4f81-92de-8efd229274a4" />
+
+Connection success
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f940629c-1620-487f-a1da-753eefaef3d5" />
+
+Post build action
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/64de35e6-2bf8-4ddf-beac-35315dda1777" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4e26c3e2-c5a1-4e97-8fb9-64c84cd0f73b" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/cd7eeb7a-d3c4-4e85-95d3-8625f6726880" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/334b1022-2a46-44e5-a096-1fd9590817f3" />
