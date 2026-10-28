@@ -1970,3 +1970,81 @@ Build Periodically::: H/15 * * * * ----this build happened every 5 minutes witho
 click save
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47699838-6ce0-49f9-a0bb-337c7daa0091" />
+
+
+27/10/2026
+============
+
+Email Notifications::
+=========================
+
+give continues Feedback to the Dev team via Email when a build passes, fails
+
+<img width="1732" height="699" alt="image" src="https://github.com/user-attachments/assets/61f91215-bbc2-4ca6-b84d-37fbec3c49e7" />
+
+Steps::
+
+Go to mail
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f87ead16-2975-4a40-a94c-8729d337ed32" />
+
+Click manage your google account
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f01c7450-fd39-4516-a087-d09d873cc6c7" />
+
+Click Security
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e5862551-89f2-4ef3-9117-6f86cad4a292" />
+
+Click protect your account
+
+Click Add phone number
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f0dcd740-4eda-44af-9ed6-e5edf36443fa" />
+
+Click add phone
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f68df065-0969-444c-b99b-b4b4c12fefc6" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/0a1574eb-ebc8-4d42-93fc-c79fb215f3a4" />
+
+Make sure your account is protected
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/dedf950b-e98b-44b5-9f22-d8535f23d5b5" />
+
+Make sure 2-steps Verification is ON
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d3a3ee69-2ff9-4d49-83b3-8b7c40879c23" />
+
+Credentials:
+
+In search box App Password
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/0da6a1c5-0b60-4785-9779-5a8e8fab379b" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6820fc8b-9e37-471f-adab-b7b77a97d44d" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/2c24858d-a937-4211-b73b-309ed9d037d3" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6ac93792-38f1-4857-b2b2-bfe57793fd57" />
+
+we should provide this password in Jenkins Email configuration level
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/2cc50355-9493-44be-ba89-e08b784aae55" />
+
+Go to Jenkins ---> Manage Jenkins
+
+System configurations
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f33a78d1-f566-4937-9c6e-7f2a363c86f2" />
+
+Go to Extended E-mail Notification
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/98844b26-80f5-403a-a3f6-b0a777c34940" />
+
+
+SMTP server :: smtp.gmail.com
+
+SMTP Port:: 465
+
+Credentials:: Username:: Your Email Password::Zvqxxvplduhrlffv
+
+
