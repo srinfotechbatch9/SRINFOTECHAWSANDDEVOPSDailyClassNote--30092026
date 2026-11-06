@@ -2160,3 +2160,56 @@ Post build action
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/cd7eeb7a-d3c4-4e85-95d3-8625f6726880" />
 
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/334b1022-2a46-44e5-a096-1fd9590817f3" />
+
+
+
+28/10/2026
+============
+
+I want Build a 3 projects ::
+================================
+
+I want a build 3 projects ,one project build is success then it will start 2nd project & once 2nd project build is success then it will start 3rd Project, without manually interventions we need setup these 3 projects configurations.
+
+Project-A, Projec -B, Projec - C
+
+Once Project-A build is done, then it will start Project-B build and once Project-B build SUccess then it will start Project-C build ---for this we need to select Add post-build action and select "Build other projects" in drop down and provide Project-B details.
+
+<img width="1820" height="699" alt="image" src="https://github.com/user-attachments/assets/a8cea21c-b520-41c9-8631-61ad4b880577" />
+
+
+Projec A is (Downstream project is ---Projec B)
+
+Projec B is (UP Stream project is ----Projec A)
+
+Projec C is (downstream project of --Projec B)
+
+i created 3 free style project in jenkins
+
+Project-A ::
+
+Github URL::: git@github.com:srinfotechbatch8/onlinebookstore.git
+
+Post Build Action , select the option Build Other Project Project-B
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dafba569-d272-4eba-a935-9d11e39fa961" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47be54f9-44c3-4c81-9c54-538d8ef98471" />
+
+Project -B ::
+
+Github URL:::https://github.com/srinfotechbatch8/spring-petclinic.git
+
+Post Build Action , select the option Build Other Project Project-C
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04b09483-31b4-4fee-9633-927d6abf1529" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a3a3fc10-e2b9-4f47-ae32-36d441cb58ea" />
+
+Project-C::
+
+Github URL:::https://github.com/srinfotechbatch8/devOpsWeb.git
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8e62ed62-c729-49f4-9dd7-03ebb212fd69" />
+
