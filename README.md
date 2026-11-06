@@ -2188,28 +2188,35 @@ i created 3 free style project in jenkins
 
 Project-A ::
 
-Github URL::: git@github.com:srinfotechbatch8/onlinebookstore.git
+Github URL::: git@github.com:srinfotechbatch9/onlinebookstore.git
 
 Post Build Action , select the option Build Other Project Project-B
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dafba569-d272-4eba-a935-9d11e39fa961" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/511d15e0-cddc-40b7-91bc-bba9899dbe22" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47be54f9-44c3-4c81-9c54-538d8ef98471" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8efeb601-1df7-44f1-a25a-c545d17342c5" />
+
 
 Project -B ::
 
-Github URL:::https://github.com/srinfotechbatch8/spring-petclinic.git
+Github URL:::https://github.com/srinfotechbatch9/spring-petclinic.git
 
 Post Build Action , select the option Build Other Project Project-C
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04b09483-31b4-4fee-9633-927d6abf1529" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f01fa07a-404a-4203-8c1f-536392fde1c8" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a3a3fc10-e2b9-4f47-ae32-36d441cb58ea" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2b46758f-c990-41a9-a00b-34073f0960cb" />
+
+
 
 Project-C::
 
-Github URL:::https://github.com/srinfotechbatch8/devOpsWeb.git
+Github URL:::https://github.com/srinfotechbatch9/devOpsWeb.git
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8e62ed62-c729-49f4-9dd7-03ebb212fd69" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8cbe417b-b01b-446b-9521-61628b838172" />
+
 
