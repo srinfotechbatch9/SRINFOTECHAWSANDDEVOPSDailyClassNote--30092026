@@ -2220,3 +2220,235 @@ Github URL:::https://github.com/srinfotechbatch9/devOpsWeb.git
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8cbe417b-b01b-446b-9521-61628b838172" />
 
 
+
+06/11/2026::
+===============
+
+Pipelines Introduction:::
+=============================
+
+A Jenkins pipeline is a series of automated steps or stages that define the process of continuous integration/continuous delivery (CI/CD) for your code. Jenkins, being a popular open-source automation server, uses pipelines to automate tasks like building, testing, and deploying code.
+
+There are two types of Jenkins pipelines:
+
+Declarative Pipeline
+
+Scripted Pipeline
+
+Declarative Pipeline:: The declarative pipeline syntax is simpler and more structured. It's the recommended style for most users because it's easy to read and maintain
+
+Create Pipeline Project::
+------------------------
+
+Steps
+
+Click +New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/02cd4f9c-1ba5-4967-869d-b5a910cbc110" />
+
+
+Enter the Project Name And Click OK
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6f64e30e-6ec0-49f4-8a58-e87282178f49" />
+
+
+At General Section Provide the Description
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b8d4628-f45e-4063-8424-8af02fac6d7f" />
+
+
+
+At Definition, We need to select the Pipeline Script
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3db021c-7519-4aa8-ab8f-d59622c74c26" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5e27dcf8-1aff-4943-a2f7-56769f53f10b" />
+
+
+Here's an example of a simple declarative pipeline: Syntax
+
+pipeline{
+
+agent any
+
+stages{
+
+Stage ('Clone'){
+
+steps{
+
+// write code } }
+
+Stage ('Build'){ steps{
+
+// write code } // write code
+
+}
+
+Stage ('Test'){
+
+steps{
+
+// write code } // write code
+
+} Stage ('Execute test casea and get the results'){
+
+steps{
+
+// write code } // write code
+
+}
+
+Stage ('Generated Artifact'){
+
+steps{
+
+// write code } // write code
+
+}
+
+Stage ('Deploy'){
+
+steps{
+
+// write code } // write code
+
+}
+
+// write code
+
+}
+
+}
+
+pipeline {
+
+agent any
+
+stages {
+   
+    stage('Clone') {
+       
+        steps {
+          
+            echo 'Hello World'
+        }
+    }
+    stage('Build') {
+       
+        steps {
+          
+            echo 'Hello World'
+        }
+    }
+    stage('Test') {
+       
+        steps {
+           
+            echo 'Hello World'
+        }
+    }
+    stage('Generate the test reports') {
+      
+        steps {
+           
+            echo 'Hello World'
+        }
+    }
+    stage('Publishered Artifacts') {
+       
+        steps {
+          
+            echo 'Hello World'
+        }
+    }
+    stage('Deploy') {
+      
+        steps {
+          
+            echo 'Hello World'
+        }
+    }
+}
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1890b613-db56-4751-bfab-c40bd0477d21" />
+
+
+Pipeline: Stage View::
+=========================
+
+Pipeline: Stage View Plugin in Jenkins The Pipeline: Stage View plugin is a visualization tool in Jenkins that allows users to see a graphical view of each stage in a pipeline. It provides a real-time and historical overview of pipeline execution per stage, making it easier to debug, monitor, and analyze performance.
+
+
+Click the Build Now and we can triggered the pipeline
+
+Success all the stages & Steps
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/808e607f-c9a6-4da7-b341-2b4160cb043f" />
+
+
+Key elements in the declarative pipeline:::
+
+pipeline: This is the top-level structure.
+
+agent: Specifies where the pipeline will run, such as on any available agent, a specific node, or a Docker container.
+
+stages: Defines the different steps or stages in the pipeline (e.g., Build, Test, Deploy).
+
+steps: Commands to be executed in each stage.
+
+Please try to create one pipeline job in jenkinsfile and execute the below Declarative pipeline example:;
+
+pipeline {
+
+agent any
+
+stages { stage('Clone') 
+
+{ steps 
+
+{ 
+
+git branch: 'main', url: 'https://github.com/srinfotechbatch9/onlinebookstore.git'
+
+
+} 
+
+}
+
+  stage('Build') {
+    steps {
+       bat 'mvn clean install'
+    }
+}
+  stage('Test') {
+    steps {
+       bat 'mvn test'
+    }
+}
+
+
+} 
+
+}
+
+
+
+
+Published Test Results & Artifactory in Jenkins CI/CD ::
+==========================================================
+
+In a Jenkins pipeline, Published Test Results and Artifactory
+
+1. Published Test Results
+
+Published test results allow Jenkins to display the outcome of automated tests executed during a build.
+
+archive the artifact :: target/*.jar
+
+Junit test results:: target/surefire-reports/*.xml
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a5d5188c-2d6a-47df-9c67-5c50a91ba0ab" />
+
