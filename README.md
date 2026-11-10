@@ -2462,3 +2462,97 @@ Junit test results:: target/surefire-reports/*.xml
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a5d5188c-2d6a-47df-9c67-5c50a91ba0ab" />
 
+
+
+09/11/2026::
+=============
+
+Pipeline as Code::
+==================
+
+Both declarative and scripted pipelines are stored as Jenkinsfiles, which you place in your source code repository. This allows you to version control your pipeline and keep it aligned with your application code.
+
+
+https://github.com/srinfotechbatch9/spring-petclinic.git
+
+
+https://github.com/srinfotechbatch9/onlinebookstore.git
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/85de56f8-9273-4015-9f05-6303359de00e" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2dcc2c36-6501-41ff-95c1-35ac420c0ddc" />
+
+
+Declarative pipeline with Jenkinsfile::
+========================================
+
+pipeline {
+
+agent any
+
+stages {
+    
+    stage('Clone') {
+       
+        steps {
+           
+            git branch: 'feature/2026.06.18', url: 'https://github.com/srinfotechbatch9/spring-petclinic.git'
+        
+        }
+   
+    }
+    
+    stage('Build') {
+       
+        steps {
+           
+            bat 'mvn install'
+        
+        }
+   
+    }
+   
+    stage('Test') {
+       
+        steps {
+           
+            bat 'mvn test'
+        
+        }
+    
+    }
+   
+    stage('Generated the Test Reports') {
+        
+        steps {
+           
+            junit 'target/surefire-reports/*.xml'
+        
+        }
+    
+    }
+   
+    stage('Generated the Artifacts') {
+      
+        steps {
+        
+           archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
+        
+        }
+  
+    }
+  
+
+}
+
+This pipeline:::
+
+1 Checks out the source code from your Git repository.
+
+2.Builds the project using Maven. 
+
+3.Runs unit tests.
+
+4.Generated the Test Reports
+
+5.Published Artifacts
