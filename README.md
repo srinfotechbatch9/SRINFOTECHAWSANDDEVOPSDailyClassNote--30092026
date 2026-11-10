@@ -2483,6 +2483,29 @@ https://github.com/srinfotechbatch9/onlinebookstore.git
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2dcc2c36-6501-41ff-95c1-35ac420c0ddc" />
 
 
+0. Create Jenkins Pipeline Job
+
+1. Open Jenkins Dashboard.
+
+2. Click New Item.
+
+3. Enter JavaApplication-Pipeline.
+
+4. Select Pipeline.
+
+5. Go to Pipeline configuration.
+
+6. Choose Definition: Pipeline script from SCM.
+
+7. Select Git and provide your GitHub repository URL.
+
+8. Branch: */main.
+
+9. Script Path: Jenkinsfile.
+
+10. Click Save → Build Now.
+
+
 Declarative pipeline with Jenkinsfile::
 ========================================
 
