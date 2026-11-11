@@ -1,4 +1,4 @@
-# SRINFOTECHAWSANDDEVOPSDailyClassNote--30092026
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d96c3806-f3d6-4ce0-bb67-a5aeead4c14e" /># SRINFOTECHAWSANDDEVOPSDailyClassNote--30092026
 
 AWS And DevOps Demo::
 ======================
@@ -2579,4 +2579,201 @@ This pipeline:::
 4.Generated the Test Reports
 
 5.Published Artifacts
+
+
+
+10/11/2026::
+=============
+
+Scripted pipeline with Jenkinsfile::
+======================================
+node {
+
+stage('clone'){
+
+
+    git branch: 'feature/2026.10.14', url: 'https://github.com/srinfotechbatch9/spring-petclinic.git'
+
+
+}
+
+
+stage('Build'){
+
+ 
+    bat 'mvn clean install'
+
+}
+
+
+stage('Test'){
+
+  
+    bat 'mvn test'
+
+}
+
+
+stage('Generated Reports'){
+
+  
+    junit 'target/surefire-reports/*.xml'
+
+}
+
+
+stage('generated Artifacts'){
+
+    
+     archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
+
+}
+
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/23ee2d6c-655a-413c-a897-ed98300b0ad7" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/caaef155-0aef-4f80-b73b-b633eac47032" />
+
+
+Declarative vs Scripted Pipeline::
+=====================================
+
+ <img width="581" height="372" alt="image" src="https://github.com/user-attachments/assets/9dec38eb-c64f-4781-ac91-823877734942" />
+
+
+CI/CD Flow::
+===========
+
+<img width="1884" height="745" alt="image" src="https://github.com/user-attachments/assets/1f31898f-9b27-4498-b40d-d7b2b25ba68c" />
+
+Tomcat Web Server: Introduction::
+Apache Tomcat is an open-source web server and servlet container developed by the Apache Software Foundation. It is primarily used to serve Java applications and is one of the most popular servlet containers in the world.
+
+Tomcat is an essential tool for anyone working with Java web applications. It provides a simple, reliable platform for deploying and managing Java Servlets and JSPs and is widely used in both development and production environments. Its ease of use, combined with powerful features and flexibility, makes it an ideal choice for many developers working on Java-based web applications.
+
+Apache Tomcat is an open-source web server and servlet container that is primarily used to serve Java-based web applications. It implements several Java EE (Enterprise Edition) specifications, such as Java Servlet, JavaServer Pages (JSP), and WebSocket, among others. Tomcat is often used to run Java applications on the web because it's lightweight, easy to configure, and widely supported.
+
+Here are some key points about Tomcat:
+
+Servlet Container: Tomcat is a servlet container, meaning it manages the lifecycle of Java Servlets, which are small Java programs that run on a web server.
+
+JSP Support: Tomcat also supports JavaServer Pages (JSP), a technology that allows for embedding Java code within HTML pages.
+
+Configuration: It’s highly configurable through XML files, like server.xml for server settings, web.xml for application settings, and others.
+
+Lightweight: Unlike full-fledged application servers like WildFly (formerly JBoss) or GlassFish, Tomcat is primarily a servlet and JSP container, which makes it lighter and easier to deploy for simpler Java web applications.
+
+Performance: It’s known for good performance in handling static content, making it a popular choice for Java web developers.
+
+Integrate Tomcat with Jenkins::
+==================================
+
+<img width="1884" height="745" alt="image" src="https://github.com/user-attachments/assets/1f31898f-9b27-4498-b40d-d7b2b25ba68c" />
+
+Tomcat Download link::
+========================
+
+https://tomcat.apache.org/download-90.cgi
+
+64-bit Windows zip
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/edb6f49c-ffdf-4adb-8511-e744f7a40133" />
+
+
+Integrating Tomcat with Jenkins is a common use case for automating the deployment of Java-based web applications. Jenkins can be set up to deploy a web application to a Tomcat server whenever a new build is triggered.
+
+Prerequisites:
+
+Apache Tomcat should be installed and running on your server.
+
+Jenkins should be installed and running.
+
+Steps to integrate Jenkins with Tomcat:
+
+Install the "Deploy to Container" Plugin in Jenkins: The easiest way to deploy to Tomcat from Jenkins is by using the Deploy to Container plugin. This plugin allows Jenkins to deploy WAR files to a Tomcat server. Go to your Jenkins dashboard.
+
+Click on Manage Jenkins > Manage Plugins.
+
+In the Available tab, search for Deploy to Container Plugin and install it.
+
+Once installed, restart Jenkins to apply the plugin.
+
+Configure Tomcat Server in Jenkins: Now you need to tell Jenkins where your Tomcat server is running. In Jenkins, go to Manage Jenkins > Configure System.
+
+Scroll down to the Deploy to container section.
+
+Click Add Tomcat Server.
+
+Provide the necessary information:
+
+Name: Give the Tomcat server a name (Tomcat9).
+
+URL: The URL of your Tomcat server (e.g., http://localhost:8080).
+
+Username: The username for Tomcat's manager app (usually admin).
+
+Password: The password for that username (set in Tomcat's tomcat-users.xml).
+
+Save the configuration.
+
+Configure Tomcat’s tomcat-users.xml: Make sure Tomcat is set up to allow Jenkins to deploy the application by editing the tomcat-users.xml file.
+
+https://stackoverflow.com/questions/7763560/401-unauthorized-error-while-logging-in-manager-app-of-tomcat
+
+tomcat-users.xml file::
+=========================
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7a78d14a-ab65-4479-8444-5962511d0800" />
+
+Restart Tomcat to apply the changes.
+
+Create a Jenkins Job to Build and Deploy the Application: Next, you need to create a Jenkins job that will build your web application (e.g., a WAR file) and deploy it to Tomcat.
+
+From the Jenkins dashboard, click New Item.
+
+Select Freestyle Project, give it a name, and click OK.
+
+In the job configuration, go to the Build section and configure your build step, such as building a Maven project For Maven, you can use:
+
+mvn clean install
+
+In the Post-build Actions section, add Deploy war/ear to a container.
+
+In the WAR/EAR files field, provide the path to your WAR file (e.g., target/my-app.war). In the Container field, choose the Tomcat server you configured earlier. Set the Context Path (e.g., IfocusAWSDevOpsTraining), which is the URL path where the application will be accessible on Tomcat. If you want Jenkins to deploy automatically after every successful build, check the option Deploy after every successful build. Save the job.
+
+Trigger the Build and Deployment: Go to the Jenkins job you just created and click Build Now to trigger a build. After the build completes, Jenkins should deploy the WAR file to your Tomcat server. You can access your application by going to http://<tomcat_host>:<tomcat_port>/<context_path>
+
+example:: http://localhost:8080/SRINFOTECHApplication/
+
+POLL SCM:: * * * * * (every minute automatic build & deployment happend when new commits happend in github)
+
+This setup will allow Jenkins to automatically build and deploy your Java web application to Tomcat with each new build
+
+Polling SCM (Source Code Management) and webhooks are two common methods used for integrating continuous integration (CI) systems or automating tasks based on changes in repositories.
+
+Polling SCM Polling SCM is a method where a system (like Jenkins, GitLab CI, etc.) periodically checks the source code repository for changes. If it detects changes, it triggers the build process or some other automated task.
+
+How it works:
+
+A job is set up to check the SCM (like GitHub, GitLab, Bitbucket, etc.) at regular intervals (e.g., every minute or hour).
+
+The CI server pulls the repository to see if there are any new commits since the last poll.
+
+If changes are detected, it triggers the CI/CD pipeline to build, test, or deploy the application.
+
+Webhooks Webhooks provide a more efficient method for triggering actions based on changes in the repository. Rather than the CI system polling for changes, the source control platform sends an HTTP POST request (webhook) to the CI system when an event (like a commit or pull request) occurs.
+
+
+CI/CD::
+===========
+
+Github Project URL:::
+
+https://github.com/srinfotechbatch9/onlinebookstore.git
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce78d54e-0b15-46b5-b7e1-3396be0a5db9" />
+
+TomcatIntegarteWithJenkins::
+
 
