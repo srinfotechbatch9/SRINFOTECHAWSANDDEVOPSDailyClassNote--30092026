@@ -2974,6 +2974,8 @@ stages {
 
 }
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c6f3c1f9-11b5-482a-bde7-6d073f6f12d8" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4253ffaf-bbdc-4201-816f-8a9d8c821d9e" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7540cc47-a247-48ee-9daa-ece954bff5d0" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1fe395ce-e6ef-4cdc-b00c-3acba2902214" />
+
