@@ -1,4 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d96c3806-f3d6-4ce0-bb67-a5aeead4c14e" /># SRINFOTECHAWSANDDEVOPSDailyClassNote--30092026
 
 AWS And DevOps Demo::
 ======================
