@@ -2776,4 +2776,205 @@ https://github.com/srinfotechbatch9/onlinebookstore.git
 
 TomcatIntegarteWithJenkins::
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76a9fc0d-c553-4910-ac89-dedf147d43d9" />
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9929094b-d8ff-4f04-850e-ce217b0eb13e" />
+
+POLL SCM
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3a9539d5-3a95-41fe-9c16-303606802cad" />
+
+Build Steps
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b2b00966-8838-41a4-9023-91e381daac46" />
+
+Post-build Actions
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22c68896-eda6-4a0b-8120-add1d61a0a0c" />
+
+Deploy war/ear to a container
+
+WAR/EAR files ----> target/*.war
+
+Context path ---> SRinfotechonlinebookstore
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a459b924-ab64-4cdc-a597-b4ce83b7023a" />
+
+Tomcat 9.x Remote
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/141c700c-3b9c-44d0-b4ef-cc50dc3f5462" />
+
+Tomcat URL:: http://localhost:8080
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3a416060-ef83-4ff7-9492-200e59b291d9" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8e973a78-6758-40c8-9b91-02930f8dfe4d" />
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/12cb2fda-de4d-4cd6-ad26-7c37c3f5459a" />
+
+
+Deploy Onlinebookstore/spring-petclinic applications to target server (Tomcat)::
+===============================================================================
+
+please create one new pipeline job
+
+Provide the Description
+
+Integrate Jenkins with Tomcat using Declarative Approach::
+
+To integrate Jenkins with Tomcat using the Declarative Pipeline approach, you'll be using Jenkins Pipeline syntax to automate the deployment process to a Tomcat server. This process typically involves building the application, packaging it, and then deploying it to Tomcat.
+
+Jenkinsfile Configuration (Declarative Pipeline) In your Jenkins project, you'll create a Jenkinsfile, which contains the Declarative Pipeline syntax. This file defines the steps involved in the CI/CD pipeline.
+
+Please execute below script in jenkins pipeline job using Declarative style
+
+pipeline
+
+{ 
+
+
+agent any
+
+stages{
+
+stage('Git checkout'){
+
+steps{
+
+git branch: 'main', url: 'https://github.com/srinfotechbatch9/spring-petclinic.git'
+
+} 
+
+}
+
+stage('clean and install'){
+
+steps{
+
+bat 'mvn clean install'
+
+} 
+
+}
+
+stage('Package'){
+
+steps{
+
+bat 'mvn package'
+
+}
+
+}
+
+stage('Archive the Artifacts'){
+
+steps{
+
+bat 'mvn clean install' } post{ success{
+
+    archiveArtifacts artifacts: '**target/*.war'
+}
+
+}
+
+} stage('Test Cases'){
+
+steps{
+
+bat 'mvn test'
+
+}
+
+
+}
+
+stage('Deploy to tomcat server'){
+
+steps{
+
+deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRINFOTECH', war: '**/*.war'
+
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9902206b-aedf-452b-958e-2e8da8406bd0" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/94152bfc-c529-41ef-ba2a-19a43e8a815b" />
+
+
+Integrate Jenkins with Tomcat using Declarative Approach::Onlinebookstore project::
+====================================================================================
+
+github project url::
+
+https://github.com/srinfotechbatch8/onlinebookstore.git
+
+pipeline::
+==================
+
+
+pipeline {
+
+agent any
+
+
+stages {
+  
+    stage('Clone') {
+     
+        steps {
+        
+            git branch: 'master', url: 'https://github.com/srinfotechbatch9/onlinebookstore.git'
+       
+        }
+  
+    }
+    
+     stage('Build') {
+      
+        steps {
+       
+            bat 'mvn clean install'
+       
+        }
+   
+    }
+   
+     stage('Test') {
+     
+        steps {
+       
+            bat 'mvn test'
+     
+        }
+   
+    }
+    
+     stage('published Artifacts') {
+      
+        steps {
+         
+            archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+       
+        }
+   
+    }
+  
+    stage('Deploy to Target Server') {
+       
+        steps {
+       
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SROnlinebookstore', war: 'target/*.war'
+      
+        }
+   
+    }
+
+}
+
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c6f3c1f9-11b5-482a-bde7-6d073f6f12d8" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7540cc47-a247-48ee-9daa-ece954bff5d0" />
