@@ -2979,3 +2979,280 @@ stages {
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1fe395ce-e6ef-4cdc-b00c-3acba2902214" />
 
+
+
+11/11/2026::
+=============
+
+Integrate Jenkins with Tomcat using Declarative Approach::Petclinic project
+=============================================================================
+
+github project url::
+
+https://github.com/srinfotechbatch9/Petclinic.git
+
+pipeline::
+=============
+
+
+
+pipeline {
+
+agent any
+
+stages {
+  
+    stage('Clone') {
+      
+        steps {
+        
+            git branch: 'main', url: 'https://github.com/srinfotechbatch9/Petclinic.git'
+       
+        }
+ 
+    }
+    
+     stage('Build') {
+       
+        steps {
+          
+            bat 'mvn clean install'
+       
+        }
+  
+    }
+    
+     stage('Test') {
+       
+        steps {
+         
+            bat 'mvn test'
+       
+    
+        }
+   
+    }
+   
+    stage('genearted test report') {
+      
+        steps {
+         
+            junit 'target/surefire-reports/*.xml'
+      
+        }
+  
+    }
+   
+     stage('published Artifacts') {
+     
+        steps {
+       
+            archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+        
+        }
+  
+    }
+  
+    stage('Deploy to Target Server') {
+      
+        steps {
+       
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRspringpetclinic', war: 'target/*.war'
+     
+        }
+   
+    }
+
+
+}
+
+
+}
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08fc6889-2320-4bfe-ab81-e914ba227abf" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/679ac5fd-7bbf-410f-9e3b-952960e9fa19" />
+
+
+Integrate Jenkins with Tomcat using Declarative Approach::Onlinebookstore project
+================================================================================
+
+github project url::
+
+https://github.com/srinfotechbatch9/onlinebookstore.git
+
+pipeline::
+
+
+pipeline {
+
+agent any
+
+
+stages {
+  
+    stage('Clone') {
+     
+        steps {
+        
+            git branch: 'master', url: 'https://github.com/srinfotechbatch9/onlinebookstore.git'
+       
+        }
+  
+    }
+    
+     stage('Build') {
+      
+        steps {
+       
+            bat 'mvn clean install'
+       
+        }
+   
+    }
+   
+     stage('Test') {
+     
+        steps {
+       
+            bat 'mvn test'
+     
+        }
+   
+    }
+    
+     stage('published Artifacts') {
+      
+        steps {
+         
+            archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+       
+        }
+   
+    }
+  
+    stage('Deploy to Target Server') {
+       
+        steps {
+       
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SROnlinebookstore', war: 'target/*.war'
+      
+        }
+   
+    }
+
+
+}
+
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a890418a-62ee-4479-a52f-8486d7e61d0e" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3e301a3e-3861-44fd-9acc-536fe049e82e" />
+
+
+Integrate Jenkins with Tomcat using Declarative Approach::DevOpsWeb project
+==============================================================================
+
+github project url::
+
+https://github.com/srinfotechbatch9/devOpsWeb.git
+
+pipeline::
+============
+
+
+pipeline {
+
+agent any
+
+
+stages {
+  
+    stage('Clone') {
+    
+        steps {
+      
+            git branch: 'master', url: 'https://github.com/srinfotechbatch9/devOpsWeb.git'
+      
+        }
+ 
+    }
+    
+     stage('Build') {
+      
+        steps {
+         
+            bat 'mvn clean install'
+        
+        }
+   
+    }
+   
+     stage('Test') {
+       
+        steps {
+         
+            bat 'mvn test'
+      
+        }
+   
+    }
+    
+     stage('published Artifacts') {
+      
+        steps {
+        
+            archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+      
+        }
+    
+    }
+    
+    stage('Deploy to Target Server') {
+       
+        steps {
+          
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredentials', path: '', url: 'http://localhost:8080/')], contextPath: 'DevOpsWebApplication', war: 'target/*.war'
+        
+        }
+   
+    }
+
+}
+
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b38eec6-9387-45e4-be8f-0b1245536086" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/71d3a4c4-6a16-4230-947f-983972e9bf96" />
+
+NOTE::
+=====
+please practice all above 3 projects setup end-to end CICD flow
+
+
+CI/CD:: Continuous Integration & Continutes Deployment & COntinuoues Delivery::
+=================================================================================
+
+<img width="1864" height="695" alt="image" src="https://github.com/user-attachments/assets/139b7ca4-6875-4f2e-93fc-53895a5eb33e" />
+
+
+Continuous Integration(CI)::
+=================================
+
+The practice of automating the integration of code changes from multiple Developers into a single software project. It's a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository,after which automated builds and tests are run automatically.
+
+developers frequently commit to a shared repository using a version control system such as Git,A continuous integration automatically builds and runs unit tests on the new code changes to immediately using jenkins Orchestration.
+
+Continuous Deployment(CD) ::
+================================
+
+Continuous Deployment is an extension of continuous delivery. With continuous deployment, every change that passes through the automated tests and builds is automatically deployed to production without any human intervention. The deployment process is fully automated.
+
+Continuous Delivery (CD)::
+===========================
+
+Continuous Delivery is a software development practice in which code changes are automatically built, tested, and prepared for release to production in a consistent and reliable manner. The key distinction of continuous delivery is that the process of deploying the code to production is done manually by a human decision-maker.
+
