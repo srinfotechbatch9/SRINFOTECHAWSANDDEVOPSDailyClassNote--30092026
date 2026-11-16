@@ -1,4 +1,4 @@
-
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7db014cb-3f90-4dc9-9e63-5d993fc95f8a" />
 AWS And DevOps Demo::
 ======================
 
@@ -3256,3 +3256,370 @@ Continuous Delivery (CD)::
 
 Continuous Delivery is a software development practice in which code changes are automatically built, tested, and prepared for release to production in a consistent and reliable manner. The key distinction of continuous delivery is that the process of deploying the code to production is done manually by a human decision-maker.
 
+
+
+12/11/2026::
+=============
+
+Introduction to SonarQube::
+=============================
+
+SonarQube is an open-source platform developed by SonarSource that is used for continuous inspection of code quality. It helps developers and development teams identify bugs, code smells, vulnerabilities, and duplication in their codebases across multiple programming languages.
+
+Key Features of SonarQube Static Code Analysis SonarQube analyzes source code without executing it, detecting issues like:
+
+Bugs
+
+Vulnerabilities
+
+Code smells (bad design or coding practices)
+
+Duplications
+
+Technical debt
+
+Sonarqube Integrate With Jenkins::
+=================================
+
+<img width="1868" height="728" alt="image" src="https://github.com/user-attachments/assets/40030315-baa2-489c-9352-e1fde9a95fda" />
+
+
+Sonarqube Download link::
+=============================
+
+https://www.sonarsource.com/products/sonarqube/downloads/
+
+
+default U/P ---admin/admin
+
+default port number:: 9000
+
+Server URL: URL to your SonarQube instance (e.g., http://localhost:9000). and default port is 9000
+
+http://localhost:9000/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aa416b78-d811-43af-921b-387104d70321" />
+
+
+To integrate SonarQube with Jenkins, you need to ensure that Jenkins can communicate with your SonarQube server to perform static code analysis during your CI/CD pipeline. This will allow you to analyze your code quality and get reports from SonarQube as part of your build process.
+
+Here's how you can integrate SonarQube with Jenkins:please follow below steps
+
+Install the SonarQube Plugin in Jenkins Before you start, ensure that you have the SonarQube Scanner Plugin installed in Jenkins: Go to Jenkins Dashboard.
+
+Click on Manage Jenkins → Plugins.
+
+Go to the Available tab, and search for SonarQube Scanner.
+
+Install it and restart Jenkins.
+
+Configure SonarQube in Jenkins Next, you need to configure SonarQube on Jenkins so it can communicate with your SonarQube server.
+
+Steps:
+Go to Jenkins Dashboard. Click on Manage Jenkins → Configure System. Scroll down to the SonarQube servers section and click Add SonarQube.
+
+Fill in the following details:
+Name::: Give your SonarQube instance a name (SonarQubeServer).
+
+Server URL: URL to your SonarQube instance (e.g., http://localhost:9000).
+
+and default port is 9000 Server Authentication Token:
+
+You can generate a token in SonarQube by navigating to My Account → Security → Generate Tokens. Paste this token into Jenkins. Click Save.
+
+Configure the SonarQube Scanner in
+
+JenkinsSteps: ===============================================
+
+In the Configure System page, scroll to the SonarQube Scanner section.
+
+Click Add SonarQube Scanner and select SonarQube Scanner for Jenkins.
+
+If you want to use a custom installation, specify the path to the SonarQube Scanner binary.
+
+Click Save.
+
+Configure SonarQube Project::
+===================
+
+Go to your SonarQube server (e.g., http://localhost:9000). Create a project or use an existing one. Obtain the Project Key from the SonarQube project and update the pipeline script as shown in the sonar.projectKey parameter.
+
+Go to Projects and click Local project
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/8ba64c4c-a5d3-4bdb-af21-2c8ca873aa2a" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/c5ec6692-15f5-438d-8ada-1e2cf0e14391" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/670fe3c2-1d58-47eb-b669-41998da18eff" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/38e24b8e-a105-481f-aa54-189d837529ed" />
+
+Click Next
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f5123e33-bd96-4869-ada5-654f6266c2d1" />
+
+Selected Use the global setting
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1d25cbc9-5686-4f08-b0db-095c6203273b" />
+
+Click Create Project
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b0b29da5-39be-46fd-8810-2d1880a0366d" />
+
+
+Project created successfully
+
+Now Spring-petclinic Project created in Sonarqube
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/c96ebaca-f0fe-46c4-ad75-b356c68640f5" />
+
+Click Locally
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/820b8a35-6d3d-4bd3-961e-a79dd954ecd4" />
+
+Click Generate for Token
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d4416fd8-d313-4c99-bf5c-a3dbd1bbe8fa" />
+
+Analyze "spring-petclinic12": sqp_0eb364758c5186bea4077eff841ddb99ba89a3ab
+
+Click Continue
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/cba6d6b0-f6ad-4100-8da0-128ec0dd683a" />
+
+Selected Maven and copy below script from sonarqube and it will help to integrate Sonarqube with jenkins pipeline
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7c996863-5b36-4d3c-a1be-edac32e6afa4" />
+
+
+Analyze "spring-petclinic12": sqp_0eb364758c5186bea4077eff841ddb99ba89a3ab
+
+Using this token integrate with Jenkins
+
+mvn clean verify sonar:sonar 
+
+-Dsonar.projectKey=spring-petclinic12 
+
+-Dsonar.projectName='spring-petclinic12' 
+
+-Dsonar.host.url=http://localhost:9000 
+
+-Dsonar.token=sqp_0eb364758c5186bea4077eff841ddb99ba89a3ab
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/883a89f2-7202-4700-90d4-68c7f30b635a" />
+
+Install sonarqube plugin
+
+Go to manage Jenkins ---plugins
+
+SonarQube Scanner
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/c12dfa3d-b18f-4950-a2da-9dd174ab355c" />
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/2503033d-9b70-4020-989e-f2df887afefc" />
+
+Go to System Configuration
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4ff2fd85-2068-4873-87d3-8e686ae6aa64" />
+
+SonarQube servers
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/61de7aea-456d-454a-949a-1de3c1de402e" />
+
+Provide the Server URL
+
+Provide the sonarqube token which we created in sonarqube
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/723f94d7-4819-44d6-9aff-42719ce6464f" />
+
+need to add credentials at manage jenkins ---> Credentials
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/37ddb518-371b-43ba-bb3a-b6311728002f" />
+
+
+Select Secret text
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7e1230d5-84d2-46a9-be54-0dd70f90adbb" />
+
+Copy secret token key
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d22eab01-cdcd-4863-ab37-e44f4ae0e380" />
+
+Click Create
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/beb7dda6-1abb-411b-9f14-f97e91886de0" />
+
+Now go to manage Jenkins - System configuration and select the credentials now
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7afe91cf-ad1d-4ae8-adb4-644ecc6e5c88" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9f063ff7-bc56-453a-a167-e9adbaa04294" />
+
+IntegrateSonarqubeWithJenkins::
+================================
+
+Go To jenkins and create new job IntegrateSonarqubeWithJenkins
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/8d30281f-72d8-482d-b6e1-8e91a3a5c210" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1d18fc2b-9295-41e9-917b-330a06691f26" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7011ae7-8935-4ce4-911f-db2cc9403a70" />
+
+Please use below script to run the pipeline job:
+===========================================
+
+Working Scripts CI/CD::
+=======================
+
+pipeline {
+
+agent any
+
+
+stages {
+  
+    stage('Clone') {
+     
+        steps {
+        
+            git branch: 'main', url: 'https://github.com/srinfotechbatch8/Petclinic.git'
+        
+        }
+  
+    }
+   
+     stage('Build') {
+      
+        steps {
+        
+            bat 'mvn clean install'
+     
+        }
+    }
+    
+     stage('Test') {
+       
+        steps {
+           
+            bat 'mvn test'
+      
+        }
+  
+    }
+   
+    stage('genearted test report') {
+       
+        
+        steps {
+           
+            junit 'target/surefire-reports/*.xml'
+       
+        }
+   
+    }
+    
+    stage('SonarQube Analysis') {
+      
+        steps {
+          
+            bat '''mvn install sonar:sonar \
+           
+            -Dsonar.projectKey=spring-petclinic \
+           
+            -Dsonar.projectName='spring-petclinic' \
+           
+            -Dsonar.host.url=http://localhost:9000 \
+           
+            -Dsonar.token=sqp_0bd725a8b51689d43d715358f8c0bc5f1238509f'''
+       
+        }
+  
+    }
+    
+     stage('published Artifacts') {
+       
+        steps {
+           
+            archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+       
+        }
+   
+    }
+  
+    stage('Deploy to Target Server') {
+        
+        steps {
+          
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredentials', path: '', url: 
+            'http://localhost:8080/')], contextPath: 'SRINFOTECHSOnarqubeTest', war: 'target/*.war'
+        }
+   
+    }
+
+}
+
+}
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c2a37e2b-45e2-4f18-a331-6bbc0136f9c8" />
+
+1.please start Jenkins on your machine & make sure Jenkins server is UP & Running state
+
+2.please start Tomcat on your machine & make sure Tomcat server is UP & Running state
+
+3.please start Sonarqube on your machine & make sure Sonarqube server is UP & Running state
+
+Once sonarqube scanner done, please verify the sonarqube dashboard for reports & results
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/70a4d279-88ed-4dd9-b9fa-00311f61ca75" />
+
+Go to Administration
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8dd288c7-5d38-4636-b309-19500785800b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a3669571-096d-49b9-a288-158a4f07b207" />
+
+Click Projects & Select Background Tasks
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c9caf9d6-7028-41fa-81da-54a959a5585d" />
+
+You can able to see all scanned projects status
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e709caf4-e555-4e2f-bcbc-0529afa73e6b" />
+
+Click on any Project, see the PASSED the quality gates
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/edfc13bb-3000-4a64-aaca-d4986c796e5c" />
+
+Click on Overall Code option
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce16170e-39ce-4f5d-92f9-0e7247a090a2" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/270a9cdc-4cac-4680-9f3e-f9338a083514" />
+see the results
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d79f762a-2bfb-4ed9-8401-dcd533846dbe" />
+
+here Code coverage is
+
+Coverage 82.7%
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d007e69c-559e-4f53-9c7e-578a18a8594d" />
+
+NOTE:: Coverage is greater than or equal to 80.0%, this should be maintained minimum % every project
+
+NOTE:::Duplicated Lines (%) is less than or equal to 3.0%
+
+Create My own Quality Gates::
+
+Go to Dashboard click on Quality Gates
+
+Now we are successfully onboarded spring-petclininc project to Sonarqube server
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e44526d2-25ea-47a8-9616-104e5cffeb74" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c018889f-1890-4b89-bfab-e7b6b28f3115" />
+
+Running the Pipeline Once the pipeline is configured, Jenkins will execute the SonarQube analysis during the build process. After the build completes, you can view the analysis results in your SonarQube dashboard.
+
+Code coverage Code smells Bugs Vulnerabilities Duplications These reports will be available in the SonarQube dashboard for your project.
