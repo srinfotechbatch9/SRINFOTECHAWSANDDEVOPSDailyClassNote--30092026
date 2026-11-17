@@ -1,4 +1,4 @@
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7db014cb-3f90-4dc9-9e63-5d993fc95f8a" />
+
 AWS And DevOps Demo::
 ======================
 
