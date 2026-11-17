@@ -3483,7 +3483,7 @@ stages {
      
         steps {
         
-            git branch: 'main', url: 'https://github.com/srinfotechbatch8/Petclinic.git'
+            git branch: 'main', url: 'https://github.com/srinfotechbatch9/Petclinic.git'
         
         }
   
@@ -3623,3 +3623,107 @@ Now we are successfully onboarded spring-petclininc project to Sonarqube server
 Running the Pipeline Once the pipeline is configured, Jenkins will execute the SonarQube analysis during the build process. After the build completes, you can view the analysis results in your SonarQube dashboard.
 
 Code coverage Code smells Bugs Vulnerabilities Duplications These reports will be available in the SonarQube dashboard for your project.
+
+
+16/11/2026::
+=============
+
+AWS (Amazon Web Services)::
+=============================
+
+Create AWS Free tier Account::
+=============================
+
+https://signin.aws.amazon.com/oauth?response_type=code&backwards_compatible=false&iam_user=true&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome&code_challenge_method=SHA-256&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fsignin-create-session&code_challenge=HVc0n22INd6OOHUid70h_s0C-qygIRomBuIp5fcTGNA&scope=openid
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0cfbafa-bb65-4286-8c85-44d41a46710e" />
+
+
+Please go throw the recorded video session and follow the steps to create the free tier AWS account.Let me know if anyone facing any issues.
+
+Jfrog Artifactory Overview::
+==========================
+
+JFrog Artifactory is a universal artifact repository manager that serves as a central hub for storing, managing, and distributing software artifacts, binaries, packages, and other assets throughout the software development lifecycle, improving automation, and ensuring release integrity.
+
+<img width="1875" height="748" alt="image" src="https://github.com/user-attachments/assets/38fb2391-9a5f-4a5f-8c85-446ceece2f40" />
+
+Artifact Repository Management:
+
+Allows for storing binaries and artifacts (e.g., libraries, packages, Docker images) in a centralized location. Supports all major package types (e.g., Maven, Gradle, npm, NuGet, RubyGems, etc.). Version Control:
+
+Helps in managing versions of your artifacts and ensures the correct version is used during builds and deployments. Integration with CI/CD:
+
+Integrates seamlessly with CI/CD tools like Jenkins, Bamboo, GitLab CI, and others. Enables automated publishing of artifacts as part of your continuous integration pipeline. Access Control & Security:
+
+Provides fine-grained access control and permissions for users and groups. Supports user authentication, security, and audit trails to ensure compliance and secure artifact management. Replication:
+
+Allows you to replicate artifacts across multiple Artifactory instances, ensuring high availability and disaster recovery capabilities. Remote Repositories:
+
+Artifactory can proxy remote repositories, allowing you to cache and fetch external dependencies without re-downloading them each time. Promotion & Release Management:
+
+You can "promote" artifacts from one repository to another (e.g., from a development repository to a production repository), allowing for better control over releases. Multi-Platform Support:
+
+Artifactory supports multiple programming languages and platforms, making it a universal solution for managing software dependencies and releases.
+
+All zip version and search 6.12.1 OSS version
+
+https://releases.jfrog.io/artifactory/bintray-artifactory/  -----download url
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/853fe1ae-9753-4c97-a235-05939574e833" />
+
+jdk compatibility version with jfrog is:: JDK 12.1.0
+
+https://www.oracle.com/in/java/technologies/javase/jdk12-archive-downloads.html
+
+artifactory-oss-6.12.1
+
+All zip version and search 6.12.1 OSS version
+
+https://releases.jfrog.io/artifactory/bintray-artifactory/
+
+Start Jfrog:: Go to downloaded the Jfrog And UNZIP the file
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e39c00e1-b061-4278-af92-4b9f7a42f308" />
+
+Go to bin folder
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4c4bfeae-4f7d-48c9-9f7c-b070bb0aec0b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4baa123c-bb2a-4206-887d-cc8703437dd5" />
+
+You should be found the artifactory.bat
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c2d9d56f-253e-41c2-9ce8-d3859c8a1a8c" />
+
+select the path and navigate to cmd (command line interface)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/428e5837-365a-4c14-9de6-37d61a0f4b3e" />
+
+run the jfrog
+
+artifactory.bat
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/77d70c8d-508e-4a1c-9338-df8186b332e7" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/462e49bd-63bf-48b0-a274-1abd025f05ed" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4456491e-1d98-41f5-8610-51b96c3ac42d" />
+
+installed plugin for artifactory plugin (Jfrog)::
+====================================================
+
+Please install below Artifactory plugin in Jenkins
+
+Artifactory Plugin Version4.0.8
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c34dfce7-ab8e-4b38-9e03-a281cd16e079" />
+
+After installed Artifactory plugin
+
+Go to Manage Jenkins--> System configuration find JFROG
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c7e5abf4-c5da-4393-a97f-a7319a27180f" />
+
+Click JFrog Platform Instances
+
