@@ -3991,3 +3991,65 @@ Successfully Published the Artifact to Jfrog Artifactory
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/873c9666-dbd4-44fb-b50b-4ae770019151" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8abcc638-2412-438a-b7e2-50ea61952743" />
+
+
+23/11/2026::
+=============
+
+AWS (Amazon Web Services)::
+=============================
+
+Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform offered by Amazon. It provides a broad set of services to help organizations and individuals build and scale applications, manage data, and process workloads in the cloud. AWS is designed to provide flexible, scalable, and cost-effective solutions for computing, storage, networking, machine learning, and much more.
+
+AWS ---Amazon web services
+
+compute services:: Amazon EC2 (Elastic Compute Cloud): Provides scalable virtual servers to run applications. AWS Lambda: Lets you run code without provisioning or managing servers. It automatically scales based on usage.
+
+Storage services:: Amazon S3 (Simple Storage Service): Object storage for storing and retrieving large amounts of data. Amazon EBS (Elastic Block Store): Persistent block-level storage for EC2 instances.
+
+Database:: Amazon RDS (Relational Database Service): Managed relational database service supporting multiple database engines (e.g., MySQL, PostgreSQL, MariaDB, etc.). Amazon DynamoDB: A managed NoSQL database service. Amazon Aurora: A high-performance relational database engine compatible with MySQL and PostgreSQL.
+
+Network services:: Amazon VPC (Virtual Private Cloud): Lets you create isolated networks within AWS for secure connections.
+
+Security ::
+
+AWS IAM (Identity and Access Management): Controls user access and permissions for AWS resources. AWS KMS (Key Management Service): Managed service for creating and controlling encryption keys. Security groups ---inbound, outbould roles
+
+Containers & kuberneties:: ECS ---elastic containers servcies EKS ----estastic kuberneties services AKS ---Azure kuberneties services
+
+Cloud watch --Metrics Monitoring
+
+CloudWatch Metrics allows you to track the performance and utilization of AWS resources such as EC2 instances, RDS databases, Lambda functions, S3 buckets, and much more. These metrics include CPU utilization, disk activity, network traffic, and others. You can create custom metrics for your applications or services as well.
+
+cloud trail ---Security Monitoring:
+
+Use CloudTrail logs to detect unauthorized access or activity in your AWS environment. You can track changes in security settings, unauthorized API calls, or unexpected configuration changes.
+
+Developer Tools:: AWS CodeCommit: Source control service for managing your code repositories. AWS CodeDeploy: Automates code deployments to EC2 instances and Lambda. AWS CodePipeline: Continuous integration and continuous delivery (CI/CD) service for automating the release pipeline.
+
+Docker Introductions::
+=======================
+
+Docker is an opensource & Applicatuions level virtualization technology and it's called containirazition.
+
+Docker is an open-source platform that automates the deployment, scaling, and management of applications in lightweight, portable containers. Containers are isolated environments that package an application and all its dependencies (such as libraries, binaries, and configurations) to ensure it runs uniformly across different computing environments.
+
+Physical & Virtual & Hypervisors/VMwares::
+==================
+1.tomcat & nodejs containers have it’s own process tree,own files systems,own network interfaces own storage,ram…etc
+
+2.when you want to give application to your team/testers docker is the best choice and when you want give system to your team/ testers VMwares are best choice.
+
+3.application level virtulization docker is the best choice and OS level virtulization VMwares are best choice
+
+4.individually scale the your application very easy in docker
+
+<img width="1916" height="703" alt="image" src="https://github.com/user-attachments/assets/e3d65c83-8684-4c6b-9e7b-4ceaf6668fb6" />
+
+
+Docker is a platform and that make it easier to create, deploy, and run applications using containers. Containers are lightweight, standalone, and executable units that include everything needed to run a piece of software, including the code, runtime, libraries, and system tools.
+
+Example::
+==========
+
+For festival season In your organization leave management application multiple employees are applied leaves at the same time in that scenario docker is very easy to scale the one more application but physically it’s very difficult so docker is the best choice
