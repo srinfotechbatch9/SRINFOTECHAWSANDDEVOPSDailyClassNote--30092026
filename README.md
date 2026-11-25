@@ -4053,3 +4053,158 @@ Example::
 ==========
 
 For festival season In your organization leave management application multiple employees are applied leaves at the same time in that scenario docker is very easy to scale the one more application but physically it’s very difficult so docker is the best choice
+
+
+24/11/2026::
+================
+
+container ::
+=========
+
+1.container is an insolation area of executuions of your applications OR instance of images are called containers
+
+2.Containers are created from “images”
+
+Containers are the core of Docker. They are lightweight, portable, and isolated environments where applications run. Docker is run your software packages /Applications in containers called containarizations.
+if you build a docker container for your application called containerization containers have it’s own boundaries who will create containers? Ans --docker images are created the containers
+
+Docker Images:
+=================
+
+docker image is a package with all dependencies and the necessary information to create the container and docker image derived from multiple base images.
+
+An image is a snapshot of a container, a blueprint that defines what the container will contain and how it will behave when run. It consists of an application and its dependencies. Docker images are built using a Dockerfile
+
+Docker Registry::
+================
+
+A Docker Registry is a system for storing and distributing Docker images. It is a centralized location where Docker images can be uploaded (pushed), stored, and downloaded (pulled) by users and applications. Docker images are the building blocks of containers, and registries provide a way to manage, version, and share these images across different environments.
+
+Default registry :: https://hub.docker.com/
+
+Install Docker in Ubuntu machine::
+==================================
+
+Step 1: Update Ubuntu packages
+
+Open your Ubuntu terminal and execute:
+
+>sudo apt update
+
+>sudo apt upgrade -y
+
+
+Step 2: Install required dependencies
+
+>sudo apt install -y ca-certificates curl
+
+
+Step 3: Add Docker official GPG key
+
+>sudo install -m 0755 -d /etc/apt/keyrings
+
+
+>sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+
+
+>sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+
+Step 4: Add Docker repository
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+
+Alternatively, Docker's current recommended repository format is the following. If you already completed Step 4 above, you can skip this alternative.
+sudo apt update
+
+
+Step 5: Install Docker Engine
+
+>sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+Please follow below link steps to install the docker in ubuntu and please read all the content in that link
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+
+once installed docker please verify below commands::
+
+docker --version
+
+root@ip-172-31-20-86:~# docker --version Docker version 28.0.4, build b8034c0
+
+root@ip-172-31-20-86:~# docker info Client: Docker Engine - Community Version: 28.0.4 Context: default Debug Mode: false Plugins: buildx: Docker Buildx (Docker Inc.) Version: v0.22.0 Path: /usr/libexec/docker/cli-plugins/docker-buildx compose: Docker Compose (Docker Inc.) Version: v2.34.0 Path: /usr/libexec/docker/cli-plugins/docker-compose
+
+Server: Containers: 0 Running: 0 Paused: 0 Stopped: 0 Images: 0 Server Version: 28.0.4 Storage Driver: overlay2 Backing Filesystem: extfs Supports d_type: true Using metacopy: false Native Overlay Diff: true userxattr: false Logging Driver: json-file Cgroup Driver: systemd Cgroup Version: 2 Plugins: Volume: local Network: bridge host ipvlan macvlan null overlay Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog Swarm: inactive Runtimes: io.containerd.runc.v2 runc Default Runtime: runc Init Binary: docker-init containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da runc version: v1.2.5-0-g59923ef init version: de40ad0 Security Options: apparmor seccomp Profile: builtin cgroupns Kernel Version: 6.8.0-1024-aws Operating System: Ubuntu 24.04.2 LTS OSType: linux Architecture: x86_64 CPUs: 2 Total Memory: 3.82GiB Name: ip-172-31-20-86 ID: 201c6f4b-75d3-4326-adf5-00b9a82a8d4d Docker Root Dir: /var/lib/docker Debug Mode: false Experimental: false Insecure Registries: ::1/128 127.0.0.0/8 Live Restore Enabled: false
+
+if above page is came without any erros, it means docker is installed in your machine
+
+Docker commands::
+===============
+
+>docker pull
+
+>docker pull hello-world
+
+>docker images ----used to display the all images
+
+>docker image ls ----used to display the all images
+
+>docker run ---used to build the images and create the container
+
+
+detached mode::
+===============
+
+Docker detached mode refers to running a container in the background
+
+>docker run -d <image_name>
+
+i want install jenkins using docker conatiners::
+=============================================
+
+>docker run -d -p 8080:8080 :tagname
+
+>docker run -d -p 8080:8080 jenkins/jenkins:latest
+
+go to the inside the conatainers pleas use below command::
+==========================================================
+
+>docker exec -it /bin/bash
+
+>docker exec -it 1d9f1ee478e5 /bin/bash
+
+Create the 2 Jenkins container::
+================================
+
+>docker run -d -p 8080:8080 jenkins/jenkins:latest
+>
+>>docker run -d -p 8081:8081 jenkins/jenkins:latest
+
+http://35.155.150.89:8080/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e9b8f60-c6d9-4e36-a209-ae053604a7b5" />
+
+>docker ps
+
+above command is used to verify the how many containers are running
+
+
+To view the containers running in detached mode, you can use the docker ps command:
+====================================================================================
+
+>docker ps
+
+Stopping a Container::
+===================
+
+>docker stop <containerID>
+
+Start a Container::
+======================
+
+>docker start <containerID>
