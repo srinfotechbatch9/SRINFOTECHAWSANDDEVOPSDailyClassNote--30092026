@@ -4208,3 +4208,193 @@ Start a Container::
 ======================
 
 >docker start <containerID>
+
+
+
+25/11/2026::
+==============
+
+Docker High Level Client -Server Architecture::
+==============================================
+
+<img width="1888" height="734" alt="image" src="https://github.com/user-attachments/assets/b6174e5f-ec33-49d4-8391-418ff208d9bf" />
+
+Docker's high-level architecture revolves around several components that work together to provide containerization and isolation for applications
+
+Docker Client (CLI)::
+The Docker Client is the primary interface for interacting with Docker. It can be a command-line interface (CLI), like the docker command, or a graphical interface (GUI) in some tools.
+
+It allows users to interact with Docker's features, such as building containers, running containers, and managing containers and images.
+
+It sends requests to the Docker Daemon to execute commands.
+
+Docker Daemon (Dockerd)::
+The Docker Daemon (also known as dockerd) is the core component of Docker. It runs in the background on the host system.
+
+The daemon is responsible for managing Docker containers, images, networks, and volumes. It listens for Docker API requests and handles container lifecycle operations such as starting, stopping, and building containers.
+
+The Docker Daemon can communicate with multiple Docker clients, allowing for distributed management of containers.
+
+Flow:
+1.The Docker Client sends a command to the Docker Daemon.
+
+2.The Docker Daemon interacts with containers, images, and storage volumes.
+
+3.The Docker Daemon can pull images from a Docker Registry.
+
+4.The Docker Daemon runs containers based on the images and handles networking and storage.
+
+Docker commands::
+docker pull
+
+docker pull hello-world
+
+docker images ----used to display the all images
+
+docker image ls ----used to display the all images
+
+docker run ---used to build the images and create the container
+
+NOTE:: one image we can able to cerate number of containers
+
+Dockerfile Introduction::
+A Dockerfile is a script containing a series of instructions on how to build a Docker image. It defines the environment and application setup, including dependencies, configurations, and the necessary steps to get your application running in a container.
+
+ockerfile is a text file, and it have set up of all instructiuons
+
+https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
+
+Dockerfile::
+dockerfile is text file, and it have set up of all instructiuons
+
+FROM nginx or ubuntu or
+
+LABEL "AUthor =srinfotech@gamil.com"
+
+RUN apt update && apt-get install jenkins -y
+
+COPY . . ----src destnations
+
+ADD . . -----src destinatuion
+
+CMD ["echo",".jar"]
+
+ENTRYPOINT ["echo", "war"]
+
+EXPOSE 8080,8085
+
+ENV APP_HOME ="srinfotech"
+
+WORKDIR $APP_HOME /app
+
+VOLUME
+
+Key Components of a Dockerfile: FROM: Specifies the base image for the Docker image you're creating.
+
+FROM ubuntu:20.04
+
+RUN: Executes commands inside the container, often used to install dependencies.
+
+RUN apt-get update && apt-get install -y python3
+
+COPY or ADD: Copies files from your local machine into the container.
+
+COPY . /app
+
+WORKDIR: Sets the working directory for any subsequent commands in the Dockerfile.
+
+WORKDIR /app
+
+CMD: Specifies the command to run when a container is started from the image.
+
+CMD ["python3", "app.py"]
+
+EXPOSE: Defines the network ports the container will listen on at runtime.
+
+EXPOSE 8080
+
+ENV: Sets environment variables inside the container. ENV APP_ENV=production CMD & ENTRPOINT can be executed starting of the container
+
+CMD & ENTRYPOINT Different:: --use CMD you can change the value but ENTRYPOINT not possible to change the value at the starting of the container --CMD you can change the argument value --ENTRYPOINT can’t change the argument value
+
+CMD ["echo",".jar"] ENTRYPOINT ["echo", "war"]
+
+CMD/ENTRYPOINT ====should have something which runs till your app is alive
+
+Note::
+life time of your container -->time which your cmd/entrypont is alive
+
+Example Dockerfile:::
+Here’s a simple Dockerfile example that builds a nodejs web app:
+
+root@ip-172-31-18-253:~# sudo vi Dockerfile
+
+Use an official Node.js runtime as a base image FROM node:18
+
+Set the working directory inside the container WORKDIR /app
+
+Copy package.json and install dependencies COPY package.json .
+
+RUN npm install
+
+Copy the rest of the application code COPY . .
+
+Expose port 3000 EXPOSE 3000
+
+Run the application CMD ["node", "index.js"]
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8368bb2-ac04-49dd-b02d-b283c062dc2e" />
+
+Example package.json
+root@ip-172-31-18-253:~# sudo vi package.json
+
+{ "name": "my-app", "version": "1.0.0", "main": "index.js", "scripts": { "start": "node index.js" }, "dependencies": { "express": "^4.18.2" } }
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4c19d63d-c3fd-41f6-9f36-9fe8e1c659b3" />
+
+Example index.js
+root@ip-172-31-18-253:~# sudo vi index.js
+
+const express = require('express'); const app = express(); const port = 3000;
+
+app.get('/', (req, res) => { res.send('Hello from Docker!'); });
+
+app.listen(port, () => { console.log(App running at http://localhost:${port}); });
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a1f8c291-d235-423d-9882-8b17f3d796cf" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90f0a0b3-5e88-4cb2-8536-dd621e350304" />
+
+Building and Running a Docker Image: Once you’ve written your Dockerfile, you can build and run it using Docker commands:
+
+Build the Docker image:
+
+root@ip-172-31-18-253:~# docker build -t srinfotechnodejs .
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/797002fb-92d5-4e50-91dd-cde06906c909" />
+
+Create & Run the container:
+
+docker run -d -p 80:80 srinfotechnodejs:latest
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b2de0af7-5060-44c2-8b16-155f46a2f0e2" />
+
+root@ip-172-31-18-253:~# docker run -d -p 3000:3000 srinfotechnodejs:latest
+
+04ab1eb49a96ad9ecc7b4d84eebf0462c05dd97db02f50d5436796427dc010cf
+
+root@ip-172-31-18-253:~#
+
+root@ip-172-31-18-253:# docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 82bf288b2a2d srinfotechnodejs:latest "docker-entrypoint.s…" About a minute ago Up About a minute 0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp distracted_jemison root@ip-172-31-18-253:#
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e638fa6e-9f49-432b-acde-ed8ae0e60728" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/07fb5a7a-9fd0-4fc5-909e-1e9082cbc010" />
+
+please try to execute below application::
+=========================================
+
+https://ajitfawade.medium.com/how-to-create-a-docker-project-for-a-node-js-web-application-90-days-of-devops-e3623f46bf7
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f834c725-09b0-4fc2-a753-20e9e5e89cb1" />
+
